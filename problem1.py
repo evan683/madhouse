@@ -21,3 +21,16 @@ Enter your income: 125000
 Your federal income tax is: 24411.7
 
 '''
+import math
+i = float(input("enter your income "))
+t = min(i, 49020)*0.15
+fi = max(i-49020, 0)
+t = min(fi, 49020)*0.205+t
+fi = max(i-98040, 0)
+t = min(fi, 53938)*0.26+t
+fi = max(i-151978, 0)
+t = min(fi, 64533)*0.29+t
+fi = max(i-216511, 0)
+t = fi*0.33+t
+t = round(t, 2)
+print(f"you have to pay {t}$ in taxes which means you have {i-t}$ left")

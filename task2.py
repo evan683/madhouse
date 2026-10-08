@@ -25,3 +25,12 @@ You earned $14152.94 interest
 ```
 '''
 import math
+P = float(input("what is the principal "))
+r = float(input("What is the annual interest rate as a percent "))
+r = r/100
+n = float(input("number of compounding periods per year "))
+t = float(input("length of time for the investment in years "))
+A = P*((1+r/n)**(n*t))
+A = round(A, 2)
+I = A-P
+print(f"the final amount is {A}$ and the interest earned is {I:.2f}$")

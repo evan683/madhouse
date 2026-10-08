@@ -15,3 +15,9 @@ Enter a length in centimeters: 32
 32 centimeters is 1 feet and 1 inches
 ```
 """
+import math
+cm = float(input("what is the length in cm "))
+inc = cm/2.54
+rin = math.fmod(inc, 12)
+ft = (inc-rin)/12
+print(f"{cm:g}cm in feet and inchs is {ft:.0f}ft{rin:.0f}in")
